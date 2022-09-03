@@ -18,6 +18,7 @@ jobs:
         cd gnustep/libs-corebase 
         . /usr/GNUstep/System/Library/Makefiles/GNUstep.sh
         ./configure
+        make
         sudo make install
     - name: Compile lib-opal
       run: |
