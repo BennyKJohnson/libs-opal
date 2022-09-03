@@ -16,12 +16,9 @@ jobs:
     - name: Install GNUstep
       run: |
         cd gnustep/libs-corebase 
-        . /usr/GNUstep/System/Library/Makefiles/GNUstep.sh
-        echo $?
-        printenv
         ./configure
-        make
-        sudo make install
+        . /usr/GNUstep/System/Library/Makefiles/GNUstep.sh
+        sudo PATH=$PATH make install
     - name: Compile lib-opal
       run: |
         . /usr/GNUstep/System/Library/Makefiles/GNUstep.sh
